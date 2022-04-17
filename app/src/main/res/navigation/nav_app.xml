@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_app"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="vn.chungha.authenticator.ui.home.HomeFragment"
+        android:label="homeFragment"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/createTokenFragment"
+        android:name="vn.chungha.authenticator.ui.create.CreateTokenFragment"
+        android:label="CreateTokenFragment"
+        tools:layout="@layout/fragment_create_token" />
+</navigation>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="colorPrimary">#0093FF</color>
+    <color name="colorPrimary_1">#80ACEB</color>
+    <color name="colorPrimary_2">#7AAAEF</color>
+    <color name="colorPrimaryDark">#1AA4FA</color>
+    <color name="colorAccent">#a3d2ca</color>
+    <color name="app_background">@color/white</color>
+    <color name="very_dark_gray">#666666</color>
+    <color name="very_dark_gray_1">#707070</color>
+    <color name="very_light_gray">#EBEBEB</color>
+    <color name="very_light_gray_1">#CECECE</color>
+
+    <color name="gray">#E0E0E0</color>
+    <color name="gray_1">#E2E2DD</color>
+    <color name="gray_2">#EDEDE7</color>
+    <color name="gray_3">#BEBEBE</color>
+    <color name="gray_4">#D6D6CD</color>
+    <color name="gray_5">#F6F6EF</color>
+    <color name="gray_6">#F8F8F2</color>
+    <color name="gray_bg">#F8F8F2</color>
+    <color name="red">#FF0000</color>
+    <color name="orange">#F7734F</color>
+
+
+    <color name="text_hint_color">#C1C1C1</color>
+    <color name="text_color_light">#666666</color>
+    <color name="background_button_color">#0093FF</color>
+    <color name="label_default">#707070</color>
+
+    <color name="transparent">@android:color/transparent</color>
+    <color name="background_title_notice">#F4F4ED</color>
+    <color name="color_line">#3C3C43</color>
+    <color name="text_content_notice">#6F6F6F</color>
+
+    <color name="color_switch_button">#34C759</color>
+    <color name="color_green">#78BA89</color>
+    <color name="background">#F8F8F2</color>
+    <color name="backgroundPhoto">#F4F4ED</color>
+    <color name="background_photo_list">#F4F4ED</color>
+    <color name="color_spring">#6AA0EF</color>
+    <color name="background_btn_uz600">#7AAAEF</color>
+    <color name="text_button_color_popup_select">#047AFD</color>
+    <color name="color_background_wheel_picker">#33000000</color>
+    <color name="color_shadow">#71706B</color>
+    <color name="color_shadow_dark_neu">#f0f0ea</color>
+
+</resources>

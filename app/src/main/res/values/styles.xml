@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme.Button" parent="Widget.MaterialComponents.Button.Icon">
+        <item name="colorButtonNormal">@color/background_button_color</item>
+        <item name="background">@color/black</item>
+    </style>
+
+    <style name="DialogTheme" >
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowIsFloating">false</item>
+    </style>
+</resources>
