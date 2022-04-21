@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_bottom_sheet"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:paddingTop="@dimen/dp_16"
+        android:paddingBottom="@dimen/dp_22"
+        app:srcCompat="@drawable/ic_down_bottom_sheet" />
+
+    <soup.neumorphism.NeumorphCardView
+        android:id="@+id/neuSenseimite"
+        style="@style/Widget.Neumorph.CardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginHorizontal="@dimen/dp_30"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:neumorph_lightSource="leftTop"
+        app:neumorph_shadowElevation="@dimen/dp_5">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/btn_add_senmite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingVertical="@dimen/dp_10">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/dp_28.5"
+                android:layout_height="@dimen/dp_28.5"
+                android:layout_marginStart="@dimen/dp_50"
+                app:srcCompat="@drawable/ic_settings_24" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/dp_10"
+                android:text="ssss"
+                android:textColor="@color/text_content_notice"
+                android:textSize="@dimen/sp_15" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </soup.neumorphism.NeumorphCardView>
+
+    <soup.neumorphism.NeumorphCardView
+        android:id="@+id/neuCamera"
+        style="@style/Widget.Neumorph.CardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginHorizontal="@dimen/dp_30"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:neumorph_lightSource="leftTop"
+        app:neumorph_shadowElevation="@dimen/dp_5">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/btn_camera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingVertical="@dimen/dp_10">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/dp_28.5"
+                android:layout_height="@dimen/dp_28.5"
+                android:layout_marginStart="@dimen/dp_50"
+                app:srcCompat="@drawable/ic_settings_24" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/dp_10"
+                android:text="ssssssssssss"
+                android:textColor="@color/text_content_notice"
+                android:textSize="@dimen/sp_15" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </soup.neumorphism.NeumorphCardView>
+
+</LinearLayout>

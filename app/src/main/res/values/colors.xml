@@ -43,7 +43,6 @@
 
     <color name="color_switch_button">#34C759</color>
     <color name="color_green">#78BA89</color>
-    <color name="background">#F8F8F2</color>
     <color name="backgroundPhoto">#F4F4ED</color>
     <color name="background_photo_list">#F4F4ED</color>
     <color name="color_spring">#6AA0EF</color>
@@ -52,5 +51,5 @@
     <color name="color_background_wheel_picker">#33000000</color>
     <color name="color_shadow">#71706B</color>
     <color name="color_shadow_dark_neu">#f0f0ea</color>
-
+    <color name="background">#EFEEEE</color>
 </resources>

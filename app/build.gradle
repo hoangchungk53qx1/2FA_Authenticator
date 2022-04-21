@@ -114,7 +114,7 @@ dependencies {
     /**
      * Neumorphism
      */
-//    implementation 'com.github.fornewid:neumorphism:0.3.2'
+    implementation 'com.github.fornewid:neumorphism:0.3.2'
 
     /**
      * Navigation

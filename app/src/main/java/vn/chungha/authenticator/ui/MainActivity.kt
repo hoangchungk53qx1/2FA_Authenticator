@@ -11,6 +11,8 @@ import dagger.hilt.android.AndroidEntryPoint
 import vn.chungha.authenticator.R
 import vn.chungha.authenticator.base.BaseActivity
 import vn.chungha.authenticator.databinding.ActivityMainBinding
+import vn.chungha.authenticator.ui.create.SelectAddToken
+import vn.chungha.authenticator.ui.create.SelectAddToken.Companion.TAG_SELECT_BOTTOM_SHEET
 import vn.chungha.authenticator.utils.SharePreference
 import javax.inject.Inject
 
@@ -39,8 +41,10 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         navController = findNavController(R.id.nav_host_fragment)
         setSupportActionBar(bottomAppBar)
         createTokenFab.setOnClickListener {
-            navController?.navigateUp() // to clear previous navigation history
-            navController?.navigate(R.id.createTokenFragment)
+//            navController?.navigateUp() // to clear previous navigation history
+//            navController?.navigate(R.id.createTokenFragment)
+            val fabDialog = SelectAddToken()
+            fabDialog.show(supportFragmentManager,TAG_SELECT_BOTTOM_SHEET)
         }
     }
 
@@ -52,8 +56,10 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             android.R.id.home -> {
-                navController?.navigateUp() // to clear previous navigation history
-                navController?.navigate(R.id.createTokenFragment)
+//                navController?.navigateUp() // to clear previous navigation history
+//                navController?.navigate(R.id.createTokenFragment)\
+                    val fabDialog = SelectAddToken()
+                    fabDialog.show(supportFragmentManager,TAG_SELECT_BOTTOM_SHEET)
                 true
             }
             R.id.action_setting -> {
