@@ -40,7 +40,7 @@
     <color name="background_title_notice">#F4F4ED</color>
     <color name="color_line">#3C3C43</color>
     <color name="text_content_notice">#6F6F6F</color>
-
+    <color name="colorSecondary">#353A4A</color>
     <color name="color_switch_button">#34C759</color>
     <color name="color_green">#78BA89</color>
     <color name="backgroundPhoto">#F4F4ED</color>

@@ -1,6 +1,11 @@
 <resources>
-    <string name="app_name">Authenticator</string>
+    <string name="app_name">2FAs Authenticator</string>
     <string name="setting">Setting</string>
     <string name="title_alert_ok">OK</string>
     <string name="content_fab">fab</string>
+
+    <string name="share_qr_code">Share QR Code</string>
+    <string name="screenshot_mode">Screenshot mode</string>
+    <string name="launch_with_screenshot_enabled">Launch with screenshot enabled</string>
+    <string name="token_details">Token details</string>
 </resources>
