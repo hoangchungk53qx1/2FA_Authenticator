@@ -3,14 +3,25 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/OpenSource/2FA_Authenticator/app/src/main/res/drawable-v23/qr_scanner_bottom_left.xml" value="0.162" />
+        <entry key="..\:/OpenSource/2FA_Authenticator/app/src/main/res/drawable-v23/qr_scanner_bottom_right.xml" value="0.162" />
+        <entry key="..\:/OpenSource/2FA_Authenticator/app/src/main/res/drawable-v23/qr_scanner_top_left.xml" value="0.162" />
+        <entry key="..\:/OpenSource/2FA_Authenticator/app/src/main/res/drawable-v23/qr_scanner_top_right.xml" value="0.162" />
         <entry key="..\:/OpenSource/2FA_Authenticator/app/src/main/res/drawable/background_edit_search.xml" value="0.162" />
         <entry key="..\:/OpenSource/2FA_Authenticator/app/src/main/res/drawable/ic_logo_app.xml" value="0.162" />
         <entry key="..\:/OpenSource/2FA_Authenticator/app/src/main/res/drawable/ic_search.xml" value="0.162" />
+        <entry key="..\:/OpenSource/2FA_Authenticator/app/src/main/res/drawable/ic_settings_24.xml" value="0.162" />
+        <entry key="..\:/OpenSource/2FA_Authenticator/app/src/main/res/drawable/qr_scanner_bottom_left.xml" value="0.162" />
+        <entry key="..\:/OpenSource/2FA_Authenticator/app/src/main/res/drawable/qr_scanner_bottom_right.xml" value="0.162" />
+        <entry key="..\:/OpenSource/2FA_Authenticator/app/src/main/res/drawable/qr_scanner_top_left.xml" value="0.162" />
+        <entry key="..\:/OpenSource/2FA_Authenticator/app/src/main/res/drawable/qr_scanner_top_right.xml" value="0.162" />
         <entry key="..\:/OpenSource/2FA_Authenticator/app/src/main/res/layout/activity_main.xml" value="0.2554347826086957" />
         <entry key="..\:/OpenSource/2FA_Authenticator/app/src/main/res/layout/fragment_create_token.xml" value="0.35052083333333334" />
         <entry key="..\:/OpenSource/2FA_Authenticator/app/src/main/res/layout/fragment_home.xml" value="0.25" />
+        <entry key="..\:/OpenSource/2FA_Authenticator/app/src/main/res/layout/fragment_qr_code.xml" value="0.1734375" />
         <entry key="..\:/OpenSource/2FA_Authenticator/app/src/main/res/layout/fragment_select_add_token.xml" value="0.35052083333333334" />
         <entry key="..\:/OpenSource/2FA_Authenticator/app/src/main/res/layout/item_token.xml" value="0.25" />
+        <entry key="..\:/OpenSource/2FA_Authenticator/app/src/main/res/menu/main_menu.xml" value="0.1734375" />
         <entry key="..\:/OpenSource/2FA_Authenticator/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.162" />
         <entry key="..\:/OpenSource/2FA_Authenticator/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.162" />
         <entry key="app/src/main/res/drawable/background_bottom_sheet.xml" value="0.1675" />

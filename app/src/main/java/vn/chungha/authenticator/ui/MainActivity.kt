@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.Menu
 import android.view.MenuItem
+import android.view.WindowManager
+import androidx.core.content.ContextCompat
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import dagger.hilt.android.AndroidEntryPoint
@@ -25,6 +27,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setupColorApp()
         setupNavigation()
     }
 
@@ -68,5 +71,11 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
             }
             else -> super.onOptionsItemSelected(item)
         }
+    }
+    private fun setupColorApp() {
+        window.setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE)
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+        window.statusBarColor = ContextCompat.getColor(applicationContext,R.color.background)
+        window.navigationBarColor = ContextCompat.getColor(applicationContext,R.color.background)
     }
 }

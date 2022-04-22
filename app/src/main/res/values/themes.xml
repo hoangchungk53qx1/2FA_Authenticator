@@ -28,4 +28,6 @@
         <item name="shapeAppearanceOverlay">@style/DialogCorners</item>
         <item name="android:windowBackground">@color/transparent</item>
     </style>
+
+
 </resources>
