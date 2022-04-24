@@ -45,6 +45,7 @@ android {
         viewBinding true
     }
     compileOptions {
+//        coreLibraryDesugaringEnabled true
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
@@ -161,14 +162,38 @@ dependencies {
     /**
      *
      */
-    api 'androidx.camera:camera-camera2:1.0.2'
-    api 'androidx.camera:camera-view:1.1.0-beta03'
-    api 'androidx.camera:camera-lifecycle:1.0.2'
+    def camerax_version = "1.1.0-beta03"
+    // The following line is optional, as the core library is included indirectly by camera-camera2
+    implementation "androidx.camera:camera-core:${camerax_version}"
+    implementation "androidx.camera:camera-camera2:${camerax_version}"
+    // If you want to additionally use the CameraX Lifecycle library
+    implementation "androidx.camera:camera-lifecycle:${camerax_version}"
+    // If you want to additionally use the CameraX VideoCapture library
+    implementation "androidx.camera:camera-video:${camerax_version}"
+    // If you want to additionally use the CameraX View class
+    implementation "androidx.camera:camera-view:${camerax_version}"
 
-    api 'com.augustcellars.cose:cose-java:1.1.0'
-    api 'org.bouncycastle:bcprov-jdk15on:1.69'
+//    api 'androidx.camera:camera-camera2:1.0.2'
+//    api 'androidx.camera:camera-view:1.1.0-beta03'
+//    api 'androidx.camera:camera-lifecycle:1.0.2'
+
+//    api 'com.augustcellars.cose:cose-java:1.1.0'
+//    api 'org.bouncycastle:bcprov-jdk15on:1.69'
 
     // QR code scanning
-    api 'com.google.zxing:core:3.4.1'
+//    implementation 'com.journeyapps:zxing-android-embedded:4.3.0'
 
+//    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.1.5'
+    implementation 'com.google.zxing:core:3.3.3'
+    /**
+     * PermissionX
+     */
+    implementation 'com.guolindev.permissionx:permissionx:1.6.2'
+
+    /**
+     * Glide
+     */
+    implementation 'com.github.bumptech.glide:glide:4.13.1'
+    implementation 'jp.wasabeef:glide-transformations:4.3.0'
+    kapt 'com.github.bumptech.glide:compiler:4.13.1'
 }

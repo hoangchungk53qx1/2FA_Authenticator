@@ -5,11 +5,14 @@ import android.content.SharedPreferences
 import android.preference.PreferenceManager
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
+import com.google.zxing.qrcode.QRCodeReader
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
+import java.util.concurrent.ExecutorService
+import java.util.concurrent.Executors
 import javax.inject.Singleton
 
 @Module
@@ -26,4 +29,11 @@ object AppModule {
         return GsonBuilder().create()
     }
 
+    @Singleton
+    @Provides
+    fun qrCodeReader(): QRCodeReader = QRCodeReader()
+
+    @Singleton
+    @Provides
+    fun executorService(): ExecutorService = Executors.newFixedThreadPool(4)
 }

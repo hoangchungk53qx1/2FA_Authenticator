@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
+import vn.chungha.authenticator.R
 import vn.chungha.authenticator.base.BaseBottomSheet
 import vn.chungha.authenticator.databinding.FragmentSelectAddTokenBinding
 import vn.chungha.authenticator.extension.onClick
@@ -26,9 +28,8 @@ class SelectAddToken() : BaseBottomSheet<FragmentSelectAddTokenBinding>() {
 
     private fun setupView() = binding.apply {
         neuCamera.onClick {
-            val i = Intent(requireContext(), ShareQrCodeActivity::class.java)
-            i.putExtra(EditActivity.EXTRA_TOKEN_ID, token.id)
-            activity?.startActivity(i)
+            findNavController().navigate(R.id.scanQrCodeTokenFragment)
+            dismissAllowingStateLoss()
         }
     }
 

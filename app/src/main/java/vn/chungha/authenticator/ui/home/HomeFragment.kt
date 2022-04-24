@@ -33,7 +33,7 @@ class HomeFragment() : BaseFragment<FragmentHomeBinding, MainActivity>() {
     }
 
     override fun setupData() {
-
+//        showBottomBar(true)
     }
 
     private fun clickToken(token: Token) {

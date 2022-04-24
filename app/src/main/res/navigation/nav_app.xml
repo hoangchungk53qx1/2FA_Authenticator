@@ -15,4 +15,10 @@
         android:name="vn.chungha.authenticator.ui.create.CreateTokenFragment"
         android:label="CreateTokenFragment"
         tools:layout="@layout/fragment_create_token" />
+
+    <fragment
+        android:id="@+id/scanQrCodeTokenFragment"
+        android:name="vn.chungha.authenticator.ui.qrcode.ScanQrCodeFragment"
+        android:label="ScanQrCodeActivity"
+        tools:layout="@layout/fragment_qr_code" />
 </navigation>

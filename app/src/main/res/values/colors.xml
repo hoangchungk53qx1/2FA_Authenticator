@@ -7,7 +7,7 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-
+    <color name="black_60">#99000000</color>
     <color name="colorPrimary">#0093FF</color>
     <color name="colorPrimary_1">#80ACEB</color>
     <color name="colorPrimary_2">#7AAAEF</color>
@@ -18,7 +18,36 @@
     <color name="very_dark_gray_1">#707070</color>
     <color name="very_light_gray">#EBEBEB</color>
     <color name="very_light_gray_1">#CECECE</color>
+    <color name="color_primary">#1a1a1a</color>
+    <color name="color_primary_variant">#3700b3</color>
+    <color name="color_secondary">#1a1a1a</color>
+    <color name="color_secondary_variant">#018786</color>
 
+    <!--colorBackground appears behind scrollable content and is used for the default window-->
+    <!--background. colorSurface is mapped to the surface of components such as cards, sheets-->
+    <!--and menus. colorError is used to indicate an error state for components such as-->
+    <!--text fields.-->
+    <color name="color_background">#EFEEEE</color>
+    <color name="color_surface">#ffffff</color>
+    <color name="color_error">#b00020</color>
+
+    <!--"On" colors define how text, icons and strokes are colored in relation to the surface-->
+    <!--on which they appear.-->
+    <color name="color_on_primary">#ffffff</color>
+    <color name="color_on_secondary">#ffffff</color>
+    <color name="color_on_background">#000000</color>
+    <color name="color_on_surface">#000000</color>
+    <color name="color_on_surface_secondary">#9e9e9e</color>
+    <color name="color_on_surface_disabled">#60000000</color>
+    <color name="color_on_error">#ffffff</color>
+
+    <color name="color_divider">#1F000000</color>
+    <color name="color_tinted_surface">#ffffff</color>
+
+    <color name="immersive_sys_ui">#33000000</color>
+
+    <color name="auto_wallpaper_widget_background_color">@color/white</color>
+    <color name="auto_wallpaper_widget_icon_color">@color/black</color>
     <color name="gray">#E0E0E0</color>
     <color name="gray_1">#E2E2DD</color>
     <color name="gray_2">#EDEDE7</color>
@@ -52,4 +81,5 @@
     <color name="color_shadow">#71706B</color>
     <color name="color_shadow_dark_neu">#f0f0ea</color>
     <color name="background">#EFEEEE</color>
+    <color name="greyish">#ececec</color>
 </resources>
