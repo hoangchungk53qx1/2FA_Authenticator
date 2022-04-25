@@ -78,15 +78,15 @@
                 android:layout_width="@dimen/dp_28.5"
                 android:layout_height="@dimen/dp_28.5"
                 android:layout_marginStart="@dimen/dp_50"
-                app:srcCompat="@drawable/ic_settings_24" />
+                app:srcCompat="@drawable/ic_qr" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginStart="@dimen/dp_10"
-                android:text="ssssssssssss"
-                android:textColor="@color/text_content_notice"
+                android:text="@string/scan_qr"
+                android:textColor="@color/black"
                 android:textSize="@dimen/sp_15" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>

@@ -10,4 +10,5 @@
     <string name="token_details">Token details</string>
     <string name="flash_turn_on">Flash : On</string>
     <string name="flash_turn_off">Flash : Off</string>
+    <string name="scan_qr">Scan QR Code</string>
 </resources>
