@@ -15,6 +15,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.viewbinding.ViewBinding
 import timber.log.Timber
 import vn.chungha.authenticator.R
+import vn.chungha.authenticator.ui.MainActivity
 
 abstract class BaseFragment<B : ViewBinding, A : Any?> : Fragment() {
     private var _binding: B? = null
@@ -120,9 +121,11 @@ abstract class BaseFragment<B : ViewBinding, A : Any?> : Fragment() {
     protected abstract fun setupView()
     protected abstract fun setupData()
 
-    fun showToolbar(isShow: Boolean) {
-
-    }
+//    fun showBottomBar(isShow: Boolean) {
+//        if (activity is MainActivity) {
+//            (activity as MainActivity).showBottomBar(isShow)
+//        }
+//    }
 
     fun showBottomNav(isShow: Boolean) {
 

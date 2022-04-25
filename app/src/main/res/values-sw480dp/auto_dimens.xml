@@ -98,6 +98,7 @@
 	<dimen name="dp_93.75">120.00dp</dimen>
 	<dimen name="dp_94">120.32dp</dimen>
 	<dimen name="dp_98">125.44dp</dimen>
+	<dimen name="dp__6">-7.68dp</dimen>
 	<dimen name="sp_10">12.80sp</dimen>
 	<dimen name="sp_11">14.08sp</dimen>
 	<dimen name="sp_12">15.36sp</dimen>

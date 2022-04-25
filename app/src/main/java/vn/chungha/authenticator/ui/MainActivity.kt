@@ -5,12 +5,17 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.Menu
 import android.view.MenuItem
+import android.view.WindowManager
+import androidx.core.content.ContextCompat
+import androidx.core.view.isGone
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import dagger.hilt.android.AndroidEntryPoint
 import vn.chungha.authenticator.R
 import vn.chungha.authenticator.base.BaseActivity
 import vn.chungha.authenticator.databinding.ActivityMainBinding
+import vn.chungha.authenticator.extension.onClick
+import vn.chungha.authenticator.extension.visibleIf
 import vn.chungha.authenticator.ui.create.SelectAddToken
 import vn.chungha.authenticator.ui.create.SelectAddToken.Companion.TAG_SELECT_BOTTOM_SHEET
 import vn.chungha.authenticator.utils.SharePreference
@@ -25,6 +30,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setupColorApp()
         setupNavigation()
     }
 
@@ -40,13 +46,16 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
     private fun setupNavigation() = binding.run {
         navController = findNavController(R.id.nav_host_fragment)
         setSupportActionBar(bottomAppBar)
-        createTokenFab.setOnClickListener {
-//            navController?.navigateUp() // to clear previous navigation history
-//            navController?.navigate(R.id.createTokenFragment)
+        createTokenFab.onClick {
             val fabDialog = SelectAddToken()
             fabDialog.show(supportFragmentManager,TAG_SELECT_BOTTOM_SHEET)
         }
     }
+
+//    fun showBottomBar(isShow : Boolean) = binding.run {
+//        bottomAppBar.visibleIf(isShow)
+//        createTokenFab.visibleIf(isShow)
+//    }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.main_menu, menu)
@@ -68,5 +77,11 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
             }
             else -> super.onOptionsItemSelected(item)
         }
+    }
+    private fun setupColorApp() {
+//        window.setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE)
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+        window.statusBarColor = ContextCompat.getColor(applicationContext,R.color.color_primary_variant)
+        window.navigationBarColor = ContextCompat.getColor(applicationContext,R.color.white)
     }
 }

@@ -11,4 +11,5 @@
         <item name="android:windowFullscreen">false</item>
         <item name="android:windowIsFloating">false</item>
     </style>
+
 </resources>

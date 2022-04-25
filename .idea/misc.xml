@@ -3,19 +3,25 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/OpenSource/2FA_Authenticator/app/src/main/res/drawable/background_edit_search.xml" value="0.162" />
-        <entry key="..\:/OpenSource/2FA_Authenticator/app/src/main/res/drawable/ic_logo_app.xml" value="0.162" />
-        <entry key="..\:/OpenSource/2FA_Authenticator/app/src/main/res/drawable/ic_search.xml" value="0.162" />
-        <entry key="..\:/OpenSource/2FA_Authenticator/app/src/main/res/layout/activity_main.xml" value="0.2554347826086957" />
-        <entry key="..\:/OpenSource/2FA_Authenticator/app/src/main/res/layout/fragment_create_token.xml" value="0.35052083333333334" />
-        <entry key="..\:/OpenSource/2FA_Authenticator/app/src/main/res/layout/fragment_home.xml" value="0.25" />
-        <entry key="..\:/OpenSource/2FA_Authenticator/app/src/main/res/layout/fragment_select_add_token.xml" value="0.35052083333333334" />
-        <entry key="..\:/OpenSource/2FA_Authenticator/app/src/main/res/layout/item_token.xml" value="0.25" />
-        <entry key="..\:/OpenSource/2FA_Authenticator/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.162" />
-        <entry key="..\:/OpenSource/2FA_Authenticator/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.162" />
+        <entry key="../../../../layout/custom_preview.xml" value="0.1734375" />
         <entry key="app/src/main/res/drawable/background_bottom_sheet.xml" value="0.1675" />
+        <entry key="app/src/main/res/drawable/bg_pill.xml" value="0.1675" />
+        <entry key="app/src/main/res/drawable/bg_rect_rounded_small.xml" value="0.1675" />
+        <entry key="app/src/main/res/drawable/ic_camera_switch.xml" value="0.1675" />
+        <entry key="app/src/main/res/drawable/ic_close.xml" value="0.1675" />
         <entry key="app/src/main/res/drawable/ic_down_bottom_sheet.xml" value="0.1675" />
+        <entry key="app/src/main/res/drawable/ic_error_triangle.xml" value="0.154" />
+        <entry key="app/src/main/res/drawable/ic_light_off.xml" value="0.1675" />
+        <entry key="app/src/main/res/drawable/ic_scanner_alert.xml" value="0.1675" />
+        <entry key="app/src/main/res/drawable/ic_search.xml" value="0.2605" />
+        <entry key="app/src/main/res/drawable/ic_zoom_off.xml" value="0.154" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/fragment_create_token.xml" value="0.15833333333333333" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.31979166666666664" />
+        <entry key="app/src/main/res/layout/fragment_qr_code.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_select_add_token.xml" value="0.15833333333333333" />
+        <entry key="app/src/main/res/layout/item_error_status.xml" value="1.0857142857142856" />
+        <entry key="app/src/main/res/menu/main_menu.xml" value="0.31979166666666664" />
       </map>
     </option>
   </component>
