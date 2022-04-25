@@ -8,8 +8,9 @@
         <entry key="..\:/OpenSource/2FA_Authenticator/app/src/main/res/drawable/ic_light_on_white.xml" value="0.162" />
         <entry key="..\:/OpenSource/2FA_Authenticator/app/src/main/res/drawable/ic_qr.xml" value="0.1705" />
         <entry key="..\:/OpenSource/2FA_Authenticator/app/src/main/res/layout/activity_main.xml" value="0.2574074074074074" />
+        <entry key="..\:/OpenSource/2FA_Authenticator/app/src/main/res/layout/fragment_create_token.xml" value="0.2140625" />
         <entry key="..\:/OpenSource/2FA_Authenticator/app/src/main/res/layout/fragment_qr_code.xml" value="0.1734375" />
-        <entry key="..\:/OpenSource/2FA_Authenticator/app/src/main/res/layout/fragment_select_add_token.xml" value="0.27314814814814814" />
+        <entry key="..\:/OpenSource/2FA_Authenticator/app/src/main/res/layout/fragment_select_add_token.xml" value="0.5" />
         <entry key="..\:/OpenSource/2FA_Authenticator/app/src/main/res/layout/fragment_setting.xml" value="0.35052083333333334" />
         <entry key="app/src/main/res/drawable/background_bottom_sheet.xml" value="0.1675" />
         <entry key="app/src/main/res/drawable/bg_pill.xml" value="0.1675" />
