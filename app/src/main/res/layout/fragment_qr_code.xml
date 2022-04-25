@@ -12,12 +12,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_5"
-        android:layout_gravity="top"
-        android:background="@color/black_60" />
-
     <vn.chungha.authenticator.customview.WindowInsetsLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -27,13 +21,26 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <View
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:id="@+id/toolbar_place_holder"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_54"
                 android:layout_gravity="top"
+                android:background="@color/black_60"
+                android:gravity="center_vertical"
                 android:visibility="visible"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgClose"
+                    android:layout_width="@dimen/dp_40"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginStart="@dimen/dp_10"
+                    app:srcCompat="@drawable/ic_close" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
             <View
                 android:id="@+id/qr_code_scanner_milk_top"
@@ -76,14 +83,13 @@
                 android:layout_margin="@dimen/dp_20"
                 android:background="@drawable/bg_rect_rounded_small"
                 android:padding="@dimen/dp_8"
-                android:text="sss"
-                android:visibility="visible"
+                android:visibility="gone"
                 app:layout_constraintBottom_toTopOf="@id/camera_preview_container"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/toolbar_place_holder"
                 app:layout_constraintWidth_default="wrap"
-                tools:visibility="visible" />
+                tools:visibility="gone" />
 
             <TextView
                 android:id="@+id/qrCodeError"
@@ -96,13 +102,13 @@
                 android:paddingStart="@dimen/dp_8"
                 android:paddingEnd="@dimen/dp_20"
                 android:text="error"
-                android:visibility="visible"
+                android:visibility="gone"
                 app:drawableStartCompat="@drawable/ic_scanner_alert"
                 app:layout_constraintBottom_toTopOf="@id/camera_preview_container"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/toolbar_place_holder"
-                tools:visibility="visible" />
+                tools:visibility="gone" />
 
             <View
                 android:id="@+id/qr_code_scanner_camera_hole"
@@ -127,11 +133,11 @@
                     android:id="@+id/imageView"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
+                    android:layout_margin="@dimen/dp_5"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintDimensionRatio="1:1"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
-                    android:layout_margin="@dimen/dp_5"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="1.0" />
@@ -196,7 +202,7 @@
 
 
             <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/fragment_qr_scanner_flash_button"
+                android:id="@+id/fabFlash"
                 android:layout_width="@dimen/dp_30"
                 android:layout_height="@dimen/dp_30"
                 android:layout_margin="@dimen/dp_20"
@@ -233,30 +239,6 @@
         app:applyWindowInsets="all"
         app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/fragment_qr_scanner_toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/dp_54"
-            android:layout_gravity="top"
-            android:background="@null"
-            app:navigationIcon="@drawable/ic_close"
-            app:title="scan"
-            app:titleTextColor="@color/white">
-
-            <TextView
-                android:id="@+id/fragment_qr_scanner_mode_indicator"
-                android:layout_width="wrap_content"
-                android:layout_height="28dp"
-                android:layout_gravity="right"
-                android:layout_marginHorizontal="@dimen/dp_12"
-                android:layout_marginEnd="-17dp"
-                android:background="@drawable/bg_pill"
-                android:gravity="center_vertical"
-                android:paddingHorizontal="@dimen/dp_15"
-                tools:backgroundTint="@color/color_green"
-                tools:text="3G" />
-
-        </androidx.appcompat.widget.Toolbar>
 
     </vn.chungha.authenticator.customview.WindowInsetsLayout>
 </FrameLayout>

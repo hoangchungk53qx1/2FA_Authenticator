@@ -52,10 +52,10 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         }
     }
 
-//    fun showBottomBar(isShow : Boolean) = binding.run {
-//        bottomAppBar.visibleIf(isShow)
-//        createTokenFab.visibleIf(isShow)
-//    }
+    fun showBottomBar(isShow : Boolean) = binding.run {
+        bottomAppBar.visibleIf(isShow)
+        createTokenFab.visibleIf(isShow)
+    }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.main_menu, menu)
