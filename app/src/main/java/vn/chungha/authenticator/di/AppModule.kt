@@ -2,6 +2,7 @@ package vn.chungha.authenticator.di
 
 import android.content.Context
 import android.content.SharedPreferences
+import android.hardware.camera2.CameraManager
 import android.preference.PreferenceManager
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
@@ -36,4 +37,5 @@ object AppModule {
     @Singleton
     @Provides
     fun executorService(): ExecutorService = Executors.newFixedThreadPool(4)
+
 }

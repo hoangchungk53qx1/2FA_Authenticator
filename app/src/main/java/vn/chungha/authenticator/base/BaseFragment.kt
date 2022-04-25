@@ -121,11 +121,11 @@ abstract class BaseFragment<B : ViewBinding, A : Any?> : Fragment() {
     protected abstract fun setupView()
     protected abstract fun setupData()
 
-//    fun showBottomBar(isShow: Boolean) {
-//        if (activity is MainActivity) {
-//            (activity as MainActivity).showBottomBar(isShow)
-//        }
-//    }
+    fun showBottomBar(isShow: Boolean) {
+        if (activity is MainActivity) {
+            (activity as MainActivity).showBottomBar(isShow)
+        }
+    }
 
     fun showBottomNav(isShow: Boolean) {
 

@@ -2,6 +2,7 @@ package vn.chungha.authenticator.ui.qrcode
 
 import android.Manifest
 import android.graphics.drawable.Drawable
+import android.hardware.camera2.CameraManager
 import android.net.Uri
 import android.view.LayoutInflater
 import android.view.Surface
@@ -10,6 +11,7 @@ import android.widget.Toast
 import androidx.camera.core.*
 import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.core.content.ContextCompat
+import androidx.core.view.isVisible
 import androidx.lifecycle.lifecycleScope
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.DataSource
@@ -20,10 +22,12 @@ import com.permissionx.guolindev.PermissionX
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 import timber.log.Timber
+import vn.chungha.authenticator.R
 import vn.chungha.authenticator.base.BaseFragment
 import vn.chungha.authenticator.core.OtpTokenFactory
 import vn.chungha.authenticator.core.TokenQRCodeDecoder
 import vn.chungha.authenticator.databinding.FragmentQrCodeBinding
+import vn.chungha.authenticator.extension.onClick
 import vn.chungha.authenticator.ui.MainActivity
 import java.util.concurrent.ExecutorService
 import javax.inject.Inject
@@ -37,8 +41,11 @@ class ScanQrCodeFragment() : BaseFragment<FragmentQrCodeBinding, MainActivity>()
     @Inject
     lateinit var tokenQRCodeDecoder: TokenQRCodeDecoder
 
+    private var camera: Camera? = null
+
     private var foundToken = false
 
+    private var isTorchOn: Boolean = false
 
     override fun onInflateView(
         inflater: LayoutInflater,
@@ -67,12 +74,6 @@ class ScanQrCodeFragment() : BaseFragment<FragmentQrCodeBinding, MainActivity>()
             .request { allGranted, _, deniedList ->
                 if (allGranted) {
                     startCamera()
-                    Toast.makeText(
-                        requireContext(),
-                        "All permissions are granted",
-                        Toast.LENGTH_LONG
-                    ).show()
-
                 } else {
                     Toast.makeText(
                         requireContext(),
@@ -81,10 +82,37 @@ class ScanQrCodeFragment() : BaseFragment<FragmentQrCodeBinding, MainActivity>()
                     ).show()
                 }
             }
+        setupFlash()
     }
 
     override fun setupData() {
-//        showBottomBar(false)
+        showBottomBar(false)
+    }
+
+    private fun setupFlash() {
+        val camera = camera ?: return
+
+        if (camera.cameraInfo.hasFlashUnit()) {
+            binding.fabFlash.isVisible = true
+            setFlashAndButtonStyle()
+        } else {
+            binding.fabFlash.isVisible = false
+        }
+
+        binding.fabFlash.onClick {
+            isTorchOn = !binding.fabFlash.isSelected
+            setFlashAndButtonStyle()
+        }
+    }
+
+    private fun setFlashAndButtonStyle() {
+        camera?.cameraControl?.enableTorch(isTorchOn)
+        val drawableId = if (isTorchOn) R.drawable.ic_light_on_white else R.drawable.ic_light_off
+        if (isTorchOn) binding.tvFlash.text =
+            getString(R.string.flash_turn_on) else binding.tvFlash.text =
+            getString(R.string.flash_turn_off)
+        binding.fabFlash.isSelected = isTorchOn
+        binding.fabFlash.setImageResource(drawableId)
     }
 
     private fun startCamera() {
@@ -110,11 +138,10 @@ class ScanQrCodeFragment() : BaseFragment<FragmentQrCodeBinding, MainActivity>()
             imageAnalysis.setAnalyzer(executorService) { imageProxy: ImageProxy ->
                 analyzeImage(imageProxy)
             }
-
             val cameraProvider: ProcessCameraProvider = cameraProviderFuture.get()
-
             cameraProvider.unbindAll()
-            cameraProvider.bindToLifecycle(this, cameraSelector, preview, imageAnalysis)
+            camera = cameraProvider.bindToLifecycle(this, cameraSelector, preview, imageAnalysis)
+            setupFlash()
         }, ContextCompat.getMainExecutor(requireContext()));
     }
 
@@ -145,6 +172,7 @@ class ScanQrCodeFragment() : BaseFragment<FragmentQrCodeBinding, MainActivity>()
 
 //            setResult(AppCompatActivity.RESULT_OK)
             if (token.imagePath == null) {
+                // Show dialog
                 popBackStack()
                 return@launch
             }

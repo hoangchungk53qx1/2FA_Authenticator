@@ -13,7 +13,9 @@ import vn.chungha.authenticator.ui.MainActivity
 @AndroidEntryPoint
 class HomeFragment() : BaseFragment<FragmentHomeBinding, MainActivity>() {
     private var fakeListToken = mutableListOf<Token>()
-    private val appAdapter = HomeAdapter(::clickToken)
+    private val appAdapter by lazy(LazyThreadSafetyMode.NONE) {
+        HomeAdapter(::clickToken)
+    }
 
     override fun onInflateView(
         inflater: LayoutInflater,
@@ -33,7 +35,12 @@ class HomeFragment() : BaseFragment<FragmentHomeBinding, MainActivity>() {
     }
 
     override fun setupData() {
-//        showBottomBar(true)
+
+    }
+
+    override fun onResume() {
+        super.onResume()
+        showBottomBar(true)
     }
 
     private fun clickToken(token: Token) {
