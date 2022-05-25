@@ -46,7 +46,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginStart="@dimen/dp_10"
-                android:text="ssss"
+                android:text="@string/add_manual"
                 android:textColor="@color/text_content_notice"
                 android:textSize="@dimen/sp_15" />
         </androidx.appcompat.widget.LinearLayoutCompat>
@@ -85,7 +85,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginStart="@dimen/dp_10"
-                android:text="ssssssssssss"
+                android:text="@string/scan_qr_code"
                 android:textColor="@color/text_content_notice"
                 android:textSize="@dimen/sp_15" />
 

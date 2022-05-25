@@ -2,7 +2,6 @@ package vn.chungha.authenticator.ui.qrcode
 
 import android.Manifest
 import android.graphics.drawable.Drawable
-import android.hardware.camera2.CameraManager
 import android.net.Uri
 import android.view.LayoutInflater
 import android.view.Surface
@@ -83,6 +82,9 @@ class ScanQrCodeFragment() : BaseFragment<FragmentQrCodeBinding, MainActivity>()
                 }
             }
         setupFlash()
+        binding.imgClose.onClick {
+            popBackStack()
+        }
     }
 
     override fun setupData() {
@@ -142,7 +144,7 @@ class ScanQrCodeFragment() : BaseFragment<FragmentQrCodeBinding, MainActivity>()
             cameraProvider.unbindAll()
             camera = cameraProvider.bindToLifecycle(this, cameraSelector, preview, imageAnalysis)
             setupFlash()
-        }, ContextCompat.getMainExecutor(requireContext()));
+        }, ContextCompat.getMainExecutor(requireContext()))
     }
 
     private fun analyzeImage(imageProxy: ImageProxy) {
@@ -160,9 +162,9 @@ class ScanQrCodeFragment() : BaseFragment<FragmentQrCodeBinding, MainActivity>()
         Timber.d("Token@@@### >>> $tokenString")
         lifecycleScope.launch {
             val token = try {
-                val t = OtpTokenFactory.createFromUri((Uri.parse(tokenString)))
+                val tokenFactory = OtpTokenFactory.createFromUri((Uri.parse(tokenString)))
 //                otpTokenDatabase.otpTokenDao().insert(t)
-                t
+                tokenFactory
             } catch (e: Throwable) {
                 popBackStack()
                 return@launch
@@ -203,9 +205,7 @@ class ScanQrCodeFragment() : BaseFragment<FragmentQrCodeBinding, MainActivity>()
                         }, 2000)
                         return false
                     }
-
-                })
-                .into(binding.imageView)
+                }).into(binding.imageView)
         }
     }
 }
