@@ -1,95 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <androidx.appcompat.widget.AppCompatImageView
+    <com.google.android.material.circularreveal.CircularRevealRelativeLayout
+        android:id="@+id/toolBar"
+        android:layout_height="?attr/actionBarSize"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:paddingTop="@dimen/dp_16"
-        android:paddingBottom="@dimen/dp_22"
-        app:srcCompat="@drawable/ic_down_bottom_sheet" />
-
-    <soup.neumorphism.NeumorphCardView
-        android:id="@+id/neuSenseimite"
-        style="@style/Widget.Neumorph.CardView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginHorizontal="@dimen/dp_10"
-        android:layout_marginTop="@dimen/dp_10"
-        android:background="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:neumorph_lightSource="leftTop"
-        app:neumorph_shadowElevation="@dimen/dp_5">
+        app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:id="@+id/btn_add_senmite"
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/dp_10"
+            app:srcCompat="@drawable/ic_arrow_back_24" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/settings"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_16"
+            android:textStyle="bold" />
+    </com.google.android.material.circularreveal.CircularRevealRelativeLayout>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/materialDivider"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_1"
+        app:dividerColor="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolBar" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearAppSetting"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_25"
+        android:layout_marginEnd="@dimen/dp_15"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialDivider">
+
+        <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingVertical="@dimen/dp_10">
+            android:text="@string/app_settings"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolBar" />
 
-            <androidx.appcompat.widget.AppCompatImageView
-                android:layout_width="@dimen/dp_28.5"
-                android:layout_height="@dimen/dp_28.5"
-                android:layout_marginStart="@dimen/dp_50"
-                app:srcCompat="@drawable/ic_settings_24" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_15"
+            android:text="@string/choose_theme"
+            android:textColor="@color/black_60" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="@dimen/dp_10"
-                android:text="@string/add_manual"
-                android:textColor="@color/text_content_notice"
-                android:textSize="@dimen/sp_15" />
-        </androidx.appcompat.widget.LinearLayoutCompat>
-    </soup.neumorphism.NeumorphCardView>
-
-    <soup.neumorphism.NeumorphCardView
-        android:id="@+id/neuCamera"
-        style="@style/Widget.Neumorph.CardView"
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearAbout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginHorizontal="@dimen/dp_10"
-        android:layout_marginBottom="@dimen/dp_30"
-        android:background="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_25"
+        android:layout_marginEnd="@dimen/dp_15"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:neumorph_lightSource="leftTop"
-        app:neumorph_shadowElevation="@dimen/dp_5">
+        app:layout_constraintTop_toBottomOf="@+id/linearAppSetting">
 
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:id="@+id/btn_camera"
+        <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingVertical="@dimen/dp_10">
+            android:text="@string/app_settings"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolBar" />
 
-            <androidx.appcompat.widget.AppCompatImageView
-                android:layout_width="@dimen/dp_28.5"
-                android:layout_height="@dimen/dp_28.5"
-                android:layout_marginStart="@dimen/dp_50"
-                app:srcCompat="@drawable/ic_settings_24" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_15"
+            android:text="@string/choose_theme"
+            android:textColor="@color/black_60" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="@dimen/dp_10"
-                android:text="@string/scan_qr_code"
-                android:textColor="@color/text_content_notice"
-                android:textSize="@dimen/sp_15" />
-
-        </androidx.appcompat.widget.LinearLayoutCompat>
-    </soup.neumorphism.NeumorphCardView>
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
