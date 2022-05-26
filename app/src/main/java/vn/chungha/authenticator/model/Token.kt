@@ -12,9 +12,9 @@ data class Token(
     val tokenType: OtpTokenType? = null,
     val algorithm: String? = null,
     val secret: String? = null,
-    val digits: Int? = null,
-    val counter: Long? = null,
-    val period: Int? = null,
+    val digits: Int,
+    val counter: Long,
+    val period: Int,
     val encryptionType: EncryptionType? = null
 )
 val TOKEN_MODEL_DIFF = TokenModelItemBack()

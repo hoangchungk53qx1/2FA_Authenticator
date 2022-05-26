@@ -11,7 +11,7 @@ import vn.chungha.authenticator.model.Token
 import vn.chungha.authenticator.ui.MainActivity
 
 @AndroidEntryPoint
-class HomeFragment() : BaseFragment<FragmentHomeBinding, MainActivity>() {
+class HomeFragment : BaseFragment<FragmentHomeBinding, MainActivity>() {
     private var fakeListToken = mutableListOf<Token>()
     private val appAdapter by lazy(LazyThreadSafetyMode.NONE) {
         HomeAdapter(::clickToken)
