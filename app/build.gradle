@@ -134,7 +134,7 @@ dependencies {
     /**
      *  Permission Working all version.
      */
-    implementation 'com.guolindev.permissionx:permissionx:1.6.2'
+    implementation 'com.guolindev.permissionx:permissionx:1.6.4'
 
     /**
      * Lottie
@@ -187,7 +187,7 @@ dependencies {
     /**
      * PermissionX
      */
-    implementation 'com.guolindev.permissionx:permissionx:1.6.2'
+    implementation 'com.guolindev.permissionx:permissionx:1.6.4'
 
     /**
      * Glide
