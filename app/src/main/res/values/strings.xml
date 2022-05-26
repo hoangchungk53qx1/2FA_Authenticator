@@ -15,4 +15,6 @@
     <string name="settings">Settings</string>
     <string name="app_settings">App Settings</string>
     <string name="choose_theme">Choose theme</string>
+    <string name="search_token">Search Token</string>
+    <string name="search">Search</string>
 </resources>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vn.chungha.authenticator.customview.TokenLayoutBuilder xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="@dimen/dp_96"
+        android:layout_height="@dimen/dp_96" />
+
+    <com.view.circulartimerview.CircularTimerView
+        android:id="@+id/circularTimer"
+        android:layout_width="@dimen/dp_150"
+        android:layout_height="@dimen/dp_150"
+        app:backgroundColor="#e76130"
+        app:backgroundWidth="8"
+        app:isClockwise="true"
+        app:maxValue="100"
+        app:prefix="Time"
+        app:progressBackgroundColor="#eee"
+        app:progressColor="#000"
+        app:progressText="."
+        app:progressTextColor="#eee"
+        app:startingPoint="bottom"
+        app:suffix=" s"
+        app:textSize="@dimen/sp_14" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="156dp"
+        android:layout_gravity="center_vertical"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:text="sssss" />
+</vn.chungha.authenticator.customview.TokenLayoutBuilder>

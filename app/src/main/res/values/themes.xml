@@ -34,5 +34,8 @@
         <item name="android:windowBackground">@color/transparent</item>
     </style>
 
+    <style name="ThemeOverlay.Autheticator.MainToolbar" parent="">
+        <item name="colorControlHighlight">@color/colorPrimary</item>
+    </style>
 
 </resources>
