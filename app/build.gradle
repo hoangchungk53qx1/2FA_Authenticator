@@ -129,7 +129,7 @@ dependencies {
      * FancyShowCaseView
      */
 
-    implementation 'com.github.faruktoptas:FancyShowCaseView:1.3.5'
+    implementation 'com.github.faruktoptas:FancyShowCaseView:1.3.9'
 
     /**
      *  Permission Working all version.
